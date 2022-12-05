@@ -1,0 +1,429 @@
+/* Variables */
+
+$color-1: #0097e6;
+$color-2: #33d9b2;
+$color-3: #ff5252;
+$color-white: #ffffff;
+$color-dark: #2c2c54;
+$font-1: "Inconsolata", monospace;
+$font-2: "Signika", sans-serif;
+$transition: all 1s;
+
+/* Global */
+
+*,*::before, *::after {
+        box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.7;
+    font-family: $font-1;
+    color: $color-dark;
+}
+
+.container {
+    max-width: 1140px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 96px 0;
+}
+
+/* Navigation */
+
+.navigation {
+    background: #0097e6;
+    padding: 12px 0;
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    li {
+        display: inline-block;
+        margin-right: 36px;
+        position: relative;
+    }
+    a {
+        text-decoration: none;
+    }
+    a:hover {
+        color: #33d9b2;
+    }
+}
+
+.navigation ul ul {
+    display: none;
+    li {
+        display: block;
+        margin-bottom: 12px;
+        width: 100%;
+    }
+}
+
+.navigation li:hover ul {
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px;
+    text-align: center;
+    }
+    
+.navigation li ul a {
+    color:#FFFFFF;
+    display: block;
+    padding : 0 24px;
+    background: #002d45;
+}
+
+/*splash*/
+
+.splash {
+    background: #0097e6;
+    color: #ffffff;
+    min-height: 500px;
+    display: flex;
+}
+    
+.splash-inner {
+    margin: auto;
+    max-width: 70%;
+    
+}
+
+.page-title {
+    margin: 0;
+    font-size: 72px;
+    word-spacing: -24px;
+    font-weight: 400;
+    line-height: 1.2;
+    span {
+        font-weight: 700;
+    
+    }
+        
+    
+}
+
+.page-subtitle {
+    margin: 24px 0;
+    font-weight: 400;
+    font-size: 16px;
+    
+}
+  
+.btn {
+    display: inline-block;
+    min-width: 160px;
+    margin: 24px auto 0 auto;
+    padding: 16px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-width: 2px;
+    border-style: solid;
+    background-position: 100% 0;
+    background-size: 300%;
+    transition: $transition;
+}
+
+.btn:hover {
+    background-position: 0 100%;
+    color: #ffffff;
+}
+
+.btn-one {
+    border-color: #ffffff;
+    color: #ffffff;
+    background-image: linear-gradient(90deg, #ffffff 50%, transparent 50%);
+}
+
+.btn-one:hover {
+    color: #0097e6;
+}
+
+/*our services*/
+
+.section-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.box {
+    flex: 0 0 33.333%;
+    position: relative;
+    padding: 0 15px;
+    .box-number {
+        font-size: 144px;
+        line-height: 1;
+        color: #33d9b2;
+        opacity: 0.3;
+        position: absolute;
+        top: -120px;
+    }
+}
+
+.box > p:first-of-type {
+    font-weight: 900;
+}
+
+.btn-two {
+    border-color: #33d9b2;
+    color: #33d9b2;
+    background-image: linear-gradient(90deg, #33d9b2 50%, transparent 50%);
+}
+
+.btn-three {
+    border-color: #ff5252;
+    color: #ff5252;
+    background-image: linear-gradient(90deg, #ff5252 50%, transparent 50%);
+}
+
+.btn-four {
+    border-color: #0097e6;
+    color: #0097e6;
+    background-image: linear-gradient(90deg, #0097e6 50%, transparent 50%);
+}
+
+.section-title {
+    font-size: 48px;
+    margin-bottom: 72px;
+}
+
+.box-title {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+/*work*/
+
+.box-work {
+    flex: 0 0 50%;
+    min-height: 300px;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.work-image {
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    left: 0;
+    img {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        object-fit: cover;
+    }
+}
+
+.work-image::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #33d9b2;
+    opacity: 0.3;
+    z-index: 1;
+    transition: $transition;
+    top: 20px;
+    left: 20px;
+}
+
+.work-image:hover::after {
+    top: 0;
+    left: 0;
+}
+
+.work-description {
+    right: 0;
+    margin-right: 20px;
+    padding-left: 230px;
+    .work-title {
+        text-align: left;
+    }
+    p {
+        text-align: left;
+        font-size: 16px;
+    }
+    p:last-of-type {
+        font-weight: 900;
+        line-height: normal;
+    }
+}
+
+.btn-five {
+    border: none;
+    padding: 0;
+    margin: 36px 0;
+    text-align: left;
+    color: #0097e6;
+}
+
+.btn-five:hover {
+    color: #33d9b2;
+}
+
+/*contact*/
+
+.contact {
+    background: #0097e6;
+    .section-title {
+        color: #ffffff;
+    }
+}
+
+.box-form {
+    display: flex;
+    margin: 0 auto;
+}
+
+form {
+    flex: 2 0 0;
+    padding-right: 96px;
+    flex-direction: column;
+}
+
+.box-contact {
+    flex: 1 0 0;
+    color: #ffffff;
+    h3 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 14px;
+    }
+}
+
+input,
+textarea {
+    background: #0097e6;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 3px #ffffff;
+    font-family: $font-1;
+    font-size: 14px;
+    padding: 8px;
+    text-align: left;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #ffffff;
+    border-bottom: solid, 3px #ffffff;
+    font-family: $font-1;
+    font-size: 14px;
+}
+
+.btn-six {
+    border-color: #ffffff;
+    color: #ffffff;
+    background-image: linear-gradient(90deg, #ffffff 50%, transparent 50%);
+}
+
+.btn-six:hover {
+    color: #0097e6;
+}
+
+/*footer*/
+
+.page-footer {
+    display: flex;
+    li {
+        display: inline-block;
+        padding: 48px 0;
+        font-size: 0;
+        transition: $transition;
+    }
+    li:hover {
+        transform: scale(1.2);
+    }
+    i {
+        font-size: 30px;
+        background-color: #ff5252;
+        color: #ffffff;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        border-radius: 50%;
+        text-align: center;
+    }
+}
+
+/*media*/
+
+@media (max-width: 767px) and (max-width: 991px) {
+    .section-inner {
+        flex-direction: column;
+    }
+    .splash {
+        flex-direction: column;
+    }
+    .page-title {
+        font-size: 52px;
+    }
+    .work-image img {
+        height: 100%;
+    }
+    .work-image::after {
+        max-width: 225px;
+        height: 100%;
+    }
+    .navigation li {
+        margin-right: 10px;
+        word-spacing: 0;
+        display: column;
+    }
+    .box-contact {
+        padding-left: 25px;
+        padding-top: 30px;
+    }
+    .page-footer li {
+        padding-bottom: 48px;
+        
+    }
+}
+    
+    
+
+        
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
